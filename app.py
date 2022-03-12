@@ -17,7 +17,7 @@ def home():
 
 #diabetes app
 
-@app.route('/diabetesindex',methods=['GET','POST'])
+@app.route('/diabetesindex.html',methods=['GET','POST'])
 def diabetespredict():
     int_features = [int(x) for x in request.form.values()]
     final_features = [np.array(int_features)]
@@ -30,7 +30,7 @@ def diabetespredict():
 
 #covid-19 app
 
-@app.route('/covid19index',methods=['GET','POST'])
+@app.route('/covid19index.html',methods=['GET','POST'])
 def covid19predict():
     int_features = [int(x) for x in request.form.values()]
     final_features = [np.array(int_features)]
@@ -43,7 +43,7 @@ def covid19predict():
 
 #heart disease app
 
-@app.route('/heartdiseaseindex',methods=['GET','POST'])
+@app.route('/heartdiseaseindex.html',methods=['GET','POST'])
 def heartdiseasepredict():
     int_features = [int(x) for x in request.form.values()]
     final_features = [np.array(int_features)]
