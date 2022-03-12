@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Diabetes Prediction</title>
+</head>
+
+<body>
+    <div class="login">
+        <h1>Know If You Are Affected By Diabetes Or Not</h1>
+
+        <form action="{{ url_for('predict')}}" method="post">
+            <div class="mb-3">
+                Enter Glucose Rate
+                <input type="text" name="glucose" required="required" />
+            </div>
+            <br>
+            <div class="mb-3">
+                Enter Insulin Rate
+                <input type="text" name="insulin" required="required" />
+            </div>
+            <br>
+            <div class="mb-3">
+                Enter Body Mass Index(BMI)
+                <input type="text" name="bmi" required="required" />
+            </div>
+            <br>
+            <div class="mb-3">
+                Enter Age
+                <input type="text" name="age" required="required" />
+            </div>
+            <br>
+
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        </form>
+
+        <br>
+        <br> {{ prediction_text1 }}
+
+    </div>
+
+
+</body>
+
+</html>

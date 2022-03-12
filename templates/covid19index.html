@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Covid-19 Prediction</title>
+</head>
+
+<body>
+    <div class="login">
+        <h1>Know If You Are Affected By Covid-19 Or Not</h1>
+
+        <form action="{{ url_for('predict')}}" method="post">
+            <div class="mb-3">
+                Enter Dry Cough Rate
+                <input type="text" name="drycough" required="required" />
+            </div>
+            <br>
+            <div class="mb-3">
+                Enter Fever Rate
+                <input type="text" name="fever" required="required" />
+            </div>
+            <br>
+            <div class="mb-3">
+                Enter Sore Throat Rate
+                <input type="text" name="sorethroat" required="required" />
+            </div>
+            <br>
+            <div class="mb-3">
+                Enter Breathing Problem Rate
+                <input type="text" name="breathingprob" required="required" />
+            </div>
+            <br>
+
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        </form>
+
+        <br>
+        <br> {{ prediction_text2 }}
+
+    </div>
+
+
+</body>
+
+</html>

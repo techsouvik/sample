@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Heart Disease Prediction</title>
+</head>
+
+<body>
+    <div class="login">
+        <h1>Know If You Are Affected By Heart Disease Or Not</h1>
+
+        <form action="{{ url_for('predict')}}" method="post">
+            <div class="mb-3">
+                Enter Chest Pain Rate
+                <input type="text" name="chestpain" required="required" />
+            </div>
+            <br>
+            <div class="mb-3">
+                Enter Blood Pressure(BP) Rate
+                <input type="text" name="bp" required="required" />
+            </div>
+            <br>
+            <div class="mb-3">
+                Enter Cholestrol Rate
+                <input type="text" name="cholestrol" required="required" />
+            </div>
+            <br>
+            <div class="mb-3">
+                Enter Maximum Heart Rate
+                <input type="text" name="maxhr" required="required" />
+            </div>
+            <br>
+
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        </form>
+
+        <br>
+        <br> {{ prediction_text3 }}
+
+    </div>
+
+</body>
+
+</html>
