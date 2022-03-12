@@ -16,11 +16,23 @@ def home():
     return render_template('home.html')
 
 #diabetes app
-
-@app.route('/diabetesindex.html',methods=['GET','POST'])
+@app.route('/d')
+def d():
+    return render_template('diabetesindex.html')
+@app.route('/c')
+def c():
+    return render_template('covid19index.html')
+@app.route('/h')
+def h():
+    return render_template('heartdiseaseindex.html')
+@app.route('/m')
+def m():
+    return render_template('medicalsuggestions.html')
+@app.route('/di',methods=['POST'])
 def diabetespredict():
     int_features = [int(x) for x in request.form.values()]
     final_features = [np.array(int_features)]
+    print(final_features)
     prediction = model1.predict(final_features)
     if prediction=='No':
         data="Not Affected By Diabetes"
@@ -30,7 +42,7 @@ def diabetespredict():
 
 #covid-19 app
 
-@app.route('/covid19index.html',methods=['GET','POST'])
+@app.route('/ci',methods=['POST'])
 def covid19predict():
     int_features = [int(x) for x in request.form.values()]
     final_features = [np.array(int_features)]
@@ -43,7 +55,7 @@ def covid19predict():
 
 #heart disease app
 
-@app.route('/heartdiseaseindex.html',methods=['GET','POST'])
+@app.route('/hi',methods=['POST'])
 def heartdiseasepredict():
     int_features = [int(x) for x in request.form.values()]
     final_features = [np.array(int_features)]

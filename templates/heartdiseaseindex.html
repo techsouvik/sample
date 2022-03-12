@@ -10,7 +10,7 @@
     <div class="login">
         <h1>Know If You Are Affected By Heart Disease Or Not</h1>
 
-        <form action="{{ url_for('predict')}}" method="post">
+        <form action="/hi" method="post">
             <div class="mb-3">
                 Enter Chest Pain Rate
                 <input type="text" name="chestpain" required="required" />
@@ -32,7 +32,7 @@
             </div>
             <br>
 
-            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+            <input type="submit" class="btn btn-primary btn-block btn-large" value="Predict">
         </form>
 
         <br>
